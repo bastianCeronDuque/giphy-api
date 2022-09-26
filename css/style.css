@@ -1,0 +1,189 @@
+/* Reset de estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Contenedor principal */
+.main {
+    width: 100%;
+    height: 100vh;
+    padding: 25px 0 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    align-items: center;
+    animation: fadeIn 2s ease 1 forwards;
+}
+
+/* Estilo del titulo principal */
+.main__title {
+    font-size: 4rem;
+    font-style: italic;
+    text-transform: uppercase;
+}
+label{
+    font-size: 1.5rem;
+}
+.form__input{
+    border: none;
+    height: 40px;
+    font-size: 1.2rem;
+    
+}
+.main__gifs__form{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin: 10px 0;
+    width: 70%;
+}
+/* Contenedor de las imagenes */
+.main__gifs__container {
+    width: 70%;
+    padding: 20px 0;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 3px;
+    border: 2px solid #cdb4db;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Contenedor de form */
+.main__gifs__form form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    color: #000;
+    font-style: italic;
+    width: 50%;
+    align-items: center;
+}
+
+.main__gifs__container img {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.custom-btn {
+
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+
+}
+
+.main__gifs__form-button {
+
+    background: rgb(247, 150, 192);
+    background: radial-gradient(circle, rgba(247, 150, 192, 1) 0%, rgba(118, 174, 241, 1) 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    width: 100%;
+}
+
+.main__gifs__form-button span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.main__gifs__form-button:before,
+.main__gifs__form-button:after {
+    position: absolute;
+    content: "";
+    height: 0%;
+    width: 1px;
+    box-shadow:
+        -1px -1px 20px 0px rgba(255, 255, 255, 1),
+        -4px -4px 5px 0px rgba(255, 255, 255, 1),
+        7px 7px 20px 0px rgba(0, 0, 0, .4),
+        4px 4px 5px 0px rgba(0, 0, 0, .3);
+}
+
+.main__gifs__form-button:before {
+    right: 0;
+    top: 0;
+    transition: all 500ms ease;
+}
+
+.main__gifs__form-button:after {
+    left: 0;
+    bottom: 0;
+    transition: all 500ms ease;
+}
+
+.main__gifs__form-button:hover {
+    background: transparent;
+    color: #76aef1;
+    box-shadow: none;
+}
+
+.main__gifs__form-button:hover:before {
+    transition: all 500ms ease;
+    height: 100%;
+}
+
+.main__gifs__form-button:hover:after {
+    transition: all 300ms ease;
+    height: 100%;
+}
+
+.main__gifs__form-button span:before,
+.main__gifs__form-button span:after {
+    position: absolute;
+    content: "";
+    box-shadow:
+        -1px -1px 20px 0px rgba(255, 255, 255, 1),
+        -4px -4px 5px 0px rgba(255, 255, 255, 1),
+        7px 7px 20px 0px rgba(0, 0, 0, .4),
+        4px 4px 5px 0px rgba(0, 0, 0, .3);
+}
+
+.main__gifs__form-button span:before {
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: .5px;
+    transition: all 500ms ease;
+}
+
+.main__gifs__form-button span:after {
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: .5px;
+    transition: all 500ms ease;
+}
+
+.main__gifs__form-button span:hover:before {
+    width: 100%;
+}
+
+.main__gifs__form-button span:hover:after {
+    width: 100%;
+}
